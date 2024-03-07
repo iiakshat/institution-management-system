@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: url('../Src/Cover.jpg'); /* Add your background image here */
+    background: url('../images/Cover.jpg'); 
     background-size: cover;
     justify-content: center;
     align-items: center;
@@ -13,14 +13,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    background-color: rgba(255, 255, 255, 0.2); 
 }
 
 .form-container {
-    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    background-color: rgba(255, 255, 255, 0.8); 
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Glass morphism effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   h2 {
