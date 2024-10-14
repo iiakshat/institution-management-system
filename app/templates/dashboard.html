@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="University Logo">
+        </div>
+        <div class="nav-links">
+            <button class="nav-btn">Dashboard</button>
+            <button class="nav-btn">Analytics</button>
+            <button class="nav-btn">Resources</button>
+            <button class="nav-btn">Fees</button>
+            <button class="nav-btn">About</button>
+        </div>
+        <div class="user-section">
+            <img src="bell.png" id="bell-icon" class="icon" alt="Notifications">
+            <img src="envelope.png" id="envelope-icon" class="icon" alt="Messages">
+            <img src="profile.png" class="profile-pic" alt="Profile">
+        </div>
+    </div>
+
+    <!-- Dashboard content -->
+    <div class="dashboard">
+        <div class="profile-card">
+            <div class="profile-header">
+                <img class="profile-photo" src="profile-photo.jpg" alt="Akshat Sanghvi">
+                <div class="profile-info">
+                    <h2>Akshat Sanghvi</h2>
+                    <p>@210303105522</p>
+                    <p>B.Tech. | CSE | 6B30 | Roll No 39</p>
+                </div>
+                <div class="profile-actions">
+                    <a href="#" class="linkedin-icon">LinkedIn</a>
+                    <a href="#" class="flag-icon">🇮🇳</a>
+                </div>
+            </div>
+            <div class="faculty-info">
+                <h3>Faculty of Engineering & Technology</h3>
+                <div class="stats">
+                    <div class="stat-item">CGPA: 9.5</div>
+                    <div class="stat-item">Attendance: 98.2%</div>
+                    <div class="stat-item">Uploads</div>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p>Email: 210303105522@paruluniversity.ac.in</p>
+                <p>Phone 1: +91 6265XXXX92</p>
+                <p>Phone 2: +91 9098XXXX13</p>
+                <p>Address: C-101, Khodiyar Nagar, Vadodara, Gujarat, 390019</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar for notifications -->
+    <div id="sidebar-notifications" class="sidebar">
+        <h2>Notifications</h2>
+        <ul>
+            <li>New assignment uploaded</li>
+            <li>Fee payment reminder</li>
+            <li>Class timing update</li>
+        </ul>
+    </div>
+
+    <!-- Sidebar for messages -->
+    <div id="sidebar-messages" class="sidebar">
+        <h2>Messages</h2>
+        <ul>
+            <li>Message from Prof. A</li>
+            <li>Message from Coordinator</li>
+            <li>Update on project submission</li>
+        </ul>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
