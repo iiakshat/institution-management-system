@@ -6,6 +6,8 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
     <script src="dashboard.js" defer></script>
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    
 </head>
 <body>
     <!-- Navbar -->
@@ -31,30 +33,28 @@
     <div class="dashboard">
         <div class="profile-card">
             <div class="profile-header">
-                <img class="profile-photo" src="profile-photo.jpg" alt="Akshat Sanghvi">
+                <img class="profile-photo" src="{{ user.profile_photo }}" alt="profile">
                 <div class="profile-info">
-                    <h2>Akshat Sanghvi</h2>
-                    <p>@210303105522</p>
-                    <p>B.Tech. | CSE | 6B30 | Roll No 39</p>
+                    <h2>{{user.name}}</h2>
+                    <p>@{{user.id}}</p>
+                    <p>{{user.course}} | {{user.department}} | {{user.division}} | Roll No {{user.rollno}}</p>
                 </div>
                 <div class="profile-actions">
-                    <a href="#" class="linkedin-icon">LinkedIn</a>
-                    <a href="#" class="flag-icon">🇮🇳</a>
+                    <a href="{{ user.linkedin_url }}" class="linkedin-icon">LinkedIn</a>
+                    <a href="{{ user.github_url }}" class="github-icon">GitHub</a>
                 </div>
             </div>
-            <div class="faculty-info">
-                <h3>Faculty of Engineering & Technology</h3>
-                <div class="stats">
-                    <div class="stat-item">CGPA: 9.5</div>
-                    <div class="stat-item">Attendance: 98.2%</div>
-                    <div class="stat-item">Uploads</div>
-                </div>
+            <h3>Faculty of Engineering & Technology</h3>
+            <div class="stats">
+                <button class="stat-item">CGPA: {{ user.cgpa }}</button>
+                <button class="stat-item">Attendance: {{ user.attendance }}%</button>
+                <button class="stat-item">Uploads</button>
             </div>
             <div class="contact-info">
-                <p>Email: 210303105522@paruluniversity.ac.in</p>
-                <p>Phone 1: +91 6265XXXX92</p>
-                <p>Phone 2: +91 9098XXXX13</p>
-                <p>Address: C-101, Khodiyar Nagar, Vadodara, Gujarat, 390019</p>
+                <p>Email: {{ user.email }}</p>
+                <p>Phone 1: {{ user.phone_primary }}</p>
+                <p>Phone 2: {{ user.phone_secondary }}</p>
+                <p>{{ user.address }}</p>
             </div>
         </div>
     </div>
