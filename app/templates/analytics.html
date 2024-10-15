@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analytics Dashboard</title>
-    <link rel="stylesheet" href="analytics.css">
+    <link rel="stylesheet" href="../static/css/analytics.css">
 </head>
 <body>
     <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
-            <h1>Parul University</h1>
+            <h1>{{institute}}</h1>
             <ul>
                 <li><a href="#" id="dashboard-btn">Dashboard</a></li>
                 <li><a href="#" class="active">Analytics</a></li>
@@ -20,40 +20,36 @@
             </ul>
         </div>
 
-        <!-- Content Section -->
         <div class="content">
-            <!-- Attendance Section -->
             <div class="header">
                 <h2>Attendance</h2>
                 <div class="month-summary">
                     <div class="summary-box">
                         <h3>Total Slots</h3>
-                        <p>252</p>
+                        <p>{{user.total_slots}}</p>
                     </div>
                     <div class="summary-box">
                         <h3>Present Slots</h3>
-                        <p>206</p>
+                        <p>{{user.present_slots}}</p>
                     </div>
                     <div class="summary-box">
                         <h3>Absent Slots</h3>
-                        <p>46</p>
+                        <p>{{user.total_slots - user.present_slots}}</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Graph Section -->
             <div class="graph-section">
                 <h2>Month View</h2>
                 <img src="graph.png" alt="Graph View" class="graph-img">
             </div>
 
-            <!-- Exam Report Section -->
             <div class="exam-report">
                 <h2>Exam Report</h2>
                 <div class="report-content">
-                    <p><strong>Semester:</strong> 5</p>
-                    <p><strong>Grade:</strong> A 7.79</p>
-                    <p><strong>CGPA:</strong> 7.88</p>
+                    <p><strong>Semester:</strong> {{user.semester}}</p>
+                    <p><strong>Grade:</strong> {{grade}} {{user.cgpa}}</p>
+                    <p><strong>CGPA:</strong> {{user.cgpa}}</p>
                 </div>
                 <div class="subject-report">
                     <table>
@@ -67,10 +63,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>2018305</td>
-                                <td>Software Engineering</td>
-                                <td>3.00</td>
-                                <td>A+</td>
+                                <td>{{subjects.id}}</td>
+                                <td>{{subjects.name}}</td>
+                                <td>{{user.credits}}</td>
+                                <td>{{user.grade}}</td>
                             </tr>
                             <!-- Add other rows -->
                         </tbody>
