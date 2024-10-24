@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fees Section</title>
+    <link rel="stylesheet" href="../static/css/fees.css">
+    <script src="../static/js/fees.js" defer></script>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="university-logo.png" alt="University Logo" class="logo-img">
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Fees</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <div class="profile">
+                <img src="profile-pic.png" alt="Profile" class="profile-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Top Fees Menu -->
+        <div class="fees-menu">
+            <h1>Fees</h1>
+            <div class="fee-options">
+                <div class="fee-item">
+                    Miscellaneous Fees
+                    <button class="pay-now-btn" data-fee="miscellaneous">Pay Now</button>
+                </div>
+                <div class="fee-item">
+                    Hostel Fees
+                    <button class="pay-now-btn" data-fee="hostel">Pay Now</button>
+                </div>
+                <div class="fee-item">
+                    Gymnasium Renewal
+                    <button class="pay-now-btn" data-fee="gym">Pay Now</button>
+                </div>
+                <div class="fee-item">
+                    Academic Fees (Online Programs)
+                    <button class="pay-now-btn" data-fee="academic">Pay Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fee details section -->
+        <div id="fee-details" class="fee-details"></div>
+
+        <!-- Transaction History -->
+        <div id="transaction-history" class="transaction-history"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

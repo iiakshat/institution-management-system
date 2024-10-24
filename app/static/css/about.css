@@ -1,0 +1,84 @@
+/* General reset for padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.header-container {
+    background-color: #002a5c;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.logo {
+    width: 80px;
+}
+
+main {
+    padding: 20px 40px;
+}
+
+h2 {
+    color: #002a5c;
+    margin-bottom: 10px;
+}
+
+.about-section, .vision-section, .team-section, .what-we-do-section, .commitment-section {
+    margin-bottom: 20px;
+}
+
+.about-box {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.red-bg {
+    background-color: #ff5f5f;
+    color: white;
+}
+
+.yellow-bg {
+    background-color: #ffcc5f;
+    color: black;
+}
+
+.grey-bg {
+    background-color: #e0e0e0;
+    color: black;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}

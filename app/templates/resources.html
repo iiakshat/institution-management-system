@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="../static/css/resources.css">
+    <script src="../static/js/resources.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navbar">
+                <img src="logo.png" alt="Parul University Logo" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Analytics</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Fees</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="content">
+            <h2>Select Date and Subject</h2>
+            <div class="select-date">
+                <label for="date">Date:</label>
+                <input type="date" id="datePicker">
+            </div>
+            
+            <div class="select-subject">
+                <label for="subject">Select Subject:</label>
+                <select id="subject">
+                    <option value="subject">{{Resource.subject}}</option>
+                    <option value="subject">{{Resource.subject}}</option>
+                    <option value="subject">{{Resource.subject}}</option>
+                    <option value="subject">{{Resource.subject}}</option>
+                    <option value="subject">{{Resource.subject}}</option>
+                </select>
+            </div>
+
+            <div class="summary-notes-toggle">
+                <button id="summaryBtn">Summary</button>
+                <button id="notesBtn">Notes</button>
+            </div>
+
+            <div id="lectureSummary" class="content-box">
+                <h3>{{Resource.subject}} Summary</h3>
+                <p>{{Resource.summary}}</p>
+            </div>
+
+            <div id="lectureNotes" class="content-box hidden">
+                <h3>{Lecture} Notes</h3>
+                <table>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Name</th>
+                        <th>Pdf Name</th>
+                        <th>Likes</th>
+                        <th>Views</th>
+                    </tr>
+                    <tr>
+                        <td>{{user.id}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{Resouce.notes_url}}</td>
+                        <td>{{Resource.likes}}</td>
+                        <td>{{Resouce.views}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{user.id}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{Resouce.notes_url}}</td>
+                        <td>{{Resource.likes}}</td>
+                        <td>{{Resouce.views}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{user.id}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{Resouce.notes_url}}</td>
+                        <td>{{Resource.likes}}</td>
+                        <td>{{Resouce.views}}</td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+    </div>
+    
+    <script src="resources.js"></script>
+</body>
+</html>
