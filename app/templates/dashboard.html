@@ -3,90 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../static/css/dashboard.css">
-    <script src="../static/js/dashboard.js" defer></script>
-=======
+    <title>College Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
-    <script src="dashboard.js" defer></script>
-    <link rel="stylesheet" href="../static/css/dashboard.css">
-    
->>>>>>> a103ffe2b2ae3dd1a70963f1cc85c6614f5ef562
 </head>
 <body>
+    
+    <br>
     <!-- Navbar -->
     <div class="navbar">
-        <div class="logo">
-            <img src="logo.png" alt="University Logo">
+        <div class="title"><img src="123.png" alt=""></div>
+        <div class="search-bar"  >
+            <input type="text" placeholder="Search" >
         </div>
-        <div class="nav-links">
-            <button class="nav-btn">Dashboard</button>
-            <button class="nav-btn">Analytics</button>
-            <button class="nav-btn">Resources</button>
-            <button class="nav-btn">Fees</button>
-            <button class="nav-btn">About</button>
-        </div>
-        <div class="user-section">
-            <img src="bell.png" id="bell-icon" class="icon" alt="Notifications">
-            <img src="envelope.png" id="envelope-icon" class="icon" alt="Messages">
-            <img src="profile.png" class="profile-pic" alt="Profile">
+        
+    
+    </div>
+
+
+
+    <!-- Second Navbar -->
+    <div class="navbar_2">
+        <div class="menu">
+            <a href="#">Dashboard</a>
+            <a href="#">Analytics</a>
+            <a href="#">Resources</a>
+            <a href="#">Fees</a>
+            <a href="#">Support</a>
         </div>
     </div>
 
-    <!-- Dashboard content -->
-    <div class="dashboard">
-        <div class="profile-card">
-            <div class="profile-header">
-                <img class="profile-photo" src="{{ user.profile_photo }}" alt="profile">
-                <div class="profile-info">
-                    <h2>{{user.name}}</h2>
-                    <p>@{{user.id}}</p>
-                    <p>{{user.course}} | {{user.department}} | {{user.division}} | Roll No {{user.rollno}}</p>
+    <!-- Main Container -->
+    <div class="container">
+        <div class="card">
+            <div class="profile-img-wrapper">
+                <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+            </div>
+            <div class="info">
+                <h2>STUDENT'S NAME</h2>
+                <p class="sub-info">B.TECH. | CSE | 6B30 | Roll No 39</p>
+                <span class="faculty">Faculty of Engineering & Technology</span>
+
+                <div class="social-icons">
+                    <img src="linkedin.png" alt="LinkedIn" >
+                    <img src="github.png" alt="GitHub">
+                    <img src="flag.jpg" alt="Country Flag">
                 </div>
-                <div class="profile-actions">
-                    <a href="{{ user.linkedin_url }}" class="linkedin-icon">LinkedIn</a>
-                    <a href="{{ user.github_url }}" class="github-icon">GitHub</a>
+
+                <div class="buttons">
+                    <div class="btn">CGPA | 9.5</div>
+                    <div class="btn">Attendance | 98.2%</div>
+                    <div class="btn">Uploads</div>
                 </div>
-            </div>
-            <h3>Faculty of Engineering & Technology</h3>
-            <div class="stats">
-                <button class="stat-item">CGPA: {{ user.cgpa }}</button>
-                <button class="stat-item">Attendance: {{ user.attendance }}%</button>
-                <button class="stat-item">Uploads</button>
-            </div>
-            <div class="contact-info">
-                <p>Email: {{ user.email }}</p>
-                <p>Phone 1: {{ user.phone_primary }}</p>
-                <p>Phone 2: {{ user.phone_secondary }}</p>
-                <p>{{ user.address }}</p>
+
+                <div class="contact-info">
+                    <p>Email: 210303105522@paruluniversity.ac.in</p>
+                    <p>Phone: +91 6265XXXX92 | +91 9098XXXX13</p>
+                    <p>Address: C-101, Khodiyar Nagar, Vadodara, Gujarat, 390019</p>
+                </div>
+
             </div>
         </div>
     </div>
-
-    <!-- Sidebar for notifications -->
-    <div id="sidebar-notifications" class="sidebar">
-        <h2>Notifications</h2>
-        <ul>
-            <li>New assignment uploaded</li>
-            <li>Fee payment reminder</li>
-            <li>Class timing update</li>
-        </ul>
-    </div>
-
-    <!-- Sidebar for messages -->
-    <div id="sidebar-messages" class="sidebar">
-        <h2>Messages</h2>
-        <ul>
-            <li>Message from Prof. A</li>
-            <li>Message from Coordinator</li>
-            <li>Update on project submission</li>
-        </ul>
-    </div>
-
-    <!-- Overlay -->
-    <div id="overlay" class="overlay"></div>
-
-    <script src="script.js"></script>
 </body>
 </html>
