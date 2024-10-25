@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>University Login</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
-<link rel="stylesheet" href="../static/css/login.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Login</title>
+    <link rel="stylesheet" href="login copy.css">
 </head>
 <body>
-<div class="login-container">
-    <h2>Login</h2>
-    <form class="login-form" action="{{ url_for('main.login') }}" method="post">
-        <input type="text" name="username" placeholder="Name">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="Login">
-    </form>
-</div>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="path/to/your/logo.png" alt="University Logo">
+        </div>
+        <div class="auth-buttons">
+            <button class="btn-signin">Sign In</button>
+            <button class="btn-signup">Sign Up</button>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <div class="background">
+        <div class="login-container">
+            <div class="login-box">
+                <h2>LOGIN</h2>
+                <input type="text" placeholder="username">
+                <input type="password" placeholder="password">
+                <a href="#">Forgot your password?</a>
+                <button class="btn-login">SIGN IN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navbar -->
+    <div class="bottom-navbar">
+        <p>Unlock Potential, Ignite Excellence</p>
+    </div>
 </body>
 </html>
