@@ -126,6 +126,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .report-content p {
     font-size: 1.2em;
     color: #333;
@@ -156,4 +157,88 @@ body {
     width: 100%;
     height: auto;
     margin-top: 20px;
+}
+
+.search-bar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.student-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.student-info {
+    font-size: 14px;
+}
+
+.cgpa {
+    font-size: 48px;
+    font-weight: bold;
+    color: #7BA66A;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cgpa span {
+    font-size: 24px;
+    color: gray;
+    margin-left: 10px;
+}
+
+.subject-report table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.subject-report th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.subject-report th {
+    background-color: #0d3b66;
+    color: white;
+}
+
+.grade-graph {
+    margin-top: 20px;
+}
+
+.bar-graph {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar {
+    width: 20px;
+    height: 100px;
+    background-color: #D84E4E;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.bar.green {
+    background-color: #7BA66A;
+}
+
+.bar-value {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.grade-graph img.grade-img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
