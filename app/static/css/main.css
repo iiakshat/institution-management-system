@@ -6,8 +6,6 @@
 }
 body {
     background: linear-gradient(120deg, #F7F7F7 0%, #D6D3D3 100%);
-    /* background-color: #d8dfe6; */
-
 }
 
 .icon {
@@ -46,6 +44,7 @@ body {
     justify-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom: 80px;
 }
 
 
