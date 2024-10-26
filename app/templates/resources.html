@@ -40,8 +40,9 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="container2">
         <section class="content">
-            <h2>Select Date and Subject</h2>
             <div class="select-date">
                 <label for="date">Date:</label>
                 <input type="date" id="datePicker">
@@ -61,13 +62,14 @@
             <h3> OR</h3>
             <form action="/upload" method="post" enctype="multipart/form-data">
                 <input type="file" name="file">
-                <button type="submit">Upload</button>
+                <button style="background: #31adff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); font-size: 15px; padding: 10px 30px 10px 30px;" type="submit">Upload</button>
             </form>
+        </div>
 
-
+        <div class="container3">
             <div class="summary-notes-toggle">
-                <button id="summaryBtn">Summary</button>
-                <button id="notesBtn">Notes</button>
+                <button class="opts" id="summaryBtn">Summary</button>
+                <button class="opts" id="notesBtn">Notes</button>
             </div>
 
                <div id="lectureSummary" class="content-box">
@@ -108,7 +110,9 @@
                     
                 </table>
             </div>
+        </div>
         </section>
+    </div>
     </div>
     
     <script src="resources.js"></script>
