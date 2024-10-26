@@ -68,7 +68,7 @@
                 <h2>Exam Report</h2>
                 <div class="report-content">
                     <p><strong>Semester:</strong> {{user.semester}}</p>
-                    <p><strong>Grade:</strong> {{grade}} {{user.cgpa}}</p>
+                    <p><strong>Grade:</strong> {{user.grade}} {{user.cgpa}}</p>
                     <p><strong>CGPA:</strong> {{user.cgpa}}</p>
                 </div>
                 <div class="subject-report">
@@ -81,15 +81,6 @@
                                 <th>Grade</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>{{subjects.id}}</td>
-                                <td>{{subjects.name}}</td>
-                                <td>{{user.credits}}</td>
-                                <td>{{user.grade}}</td>
-                            </tr>
-                            <!-- Add other rows -->
-                        </tbody>
                     </table>
                 </div>
                 <div class="grade-graph">

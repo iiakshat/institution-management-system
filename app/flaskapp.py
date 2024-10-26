@@ -50,32 +50,42 @@ db = {
         "chose" : "Audio"
     },
 
-    "user" : {
+    "User" : {
+        "email" : "210303105522@someuniversity.com",
         "name" : "Akshat Sanghvi",
-        "id" : "210303105522"
+        "id" : "210303105522",
+        "total_slots" : 252,
+        "present_slots" : 206,
+        "semester" : 5,
+        "cgpa" : 7.79,
+        "grade" : "A"
     }
 }
 @app.route('/')
 def index():
     return render_template('login.html')
 
-@app.route('/dashboard', ["GET", "POST"])
+@app.route('/dashboard')
 def dashboard():
+    return render_template('dashboard.html')
+
+@app.route('/upload', methods=["POST"])
+def upload_file():
     if request.method == 'POST':
         if 'file' not in request.files:
-            return render_template('dashboard.html', Resource=db["Resource"])
+            return render_template('resources.html', Resource=db["Resource"], user=db["User"])
     
         file = request.files['file']
-        return render_template('dashboard.html', Resource=db["ResourceLLM"])
-    return render_template('dashboard.html', Resource=db["Resource"])
+        return render_template('resources.html', Resource=db["ResourceLLM"], user=db["User"])
+    return render_template('resources.html', Resource=db["Resource"],user=db["User"])
 
 @app.route('/analytics')
 def analytics():
-    return render_template('analytics.html')
+    return render_template('analytics.html', user=db["User"])
 
 @app.route('/resources')
 def resources():
-    return render_template('resources.html')
+    return render_template('resources.html', Resource=db["Resource"], user=db["User"])
 
 @app.route('/fees')
 def fees():
