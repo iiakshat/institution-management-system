@@ -59,7 +59,10 @@
                 </select>
             </div>
             <h3> OR</h3>
-            <input type="file" id="fileInput" title="Upload Audio">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <button type="submit">Upload</button>
+            </form>
 
 
             <div class="summary-notes-toggle">
