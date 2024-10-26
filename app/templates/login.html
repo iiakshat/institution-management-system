@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University Login</title>
-    <link rel="stylesheet" href="login copy.css">
+    <link rel="stylesheet" href="../static/css/login.css">
 </head>
 <body>
     <!-- Navbar -->
     <div class="navbar">
         <div class="logo">
-            <img src="path/to/your/logo.png" alt="University Logo">
+            <img src="../static/images/logo.png" alt="University Logo">
         </div>
         <div class="auth-buttons">
             <button class="btn-signin">Sign In</button>
@@ -23,10 +23,13 @@
         <div class="login-container">
             <div class="login-box">
                 <h2>LOGIN</h2>
-                <input type="text" placeholder="username">
-                <input type="password" placeholder="password">
-                <a href="#">Forgot your password?</a>
-                <button class="btn-login">SIGN IN</button>
+                <!-- Form for login inputs -->
+                <form action="{{ url_for('dashboard') }}" method="GET">
+                    <input type="text" placeholder="Username" name="username">
+                    <input type="password" placeholder="Password" name="password">
+                    <a href="#">Forgot your password?</a>
+                    <button type="submit" class="btn-login">SIGN IN</button>
+                </form>
             </div>
         </div>
     </div>
