@@ -1,100 +1,49 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-body {
-    background-color: #d8dfe6;
 
-}
-
-/* Navbar Styling */
-.navbar {
-    background: #0559ae;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: -19px;
-    
-}
-.navbar_2{
-justify-items: center;
-background-color: #0559ae;
-}
-
-
-
-
-
-.navbar .title {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.search-bar input {
-    padding: 10px;
-    border-radius: 90px;
-    border: none;
-    width: 900px;
-}
-
-.menu {
-    display: flex;
-    gap: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 15px;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-   
-}
 
 /* Main Container Styling */
 .container {
-    width: 90%;
+    max-width: 48%;
     margin: 80px auto;
-    background: #f5f5f5;
-    border-radius: 12px;
+    background: #d7d7d78e;
+    border-radius: 18px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    padding: 30px;
-    border: 1px solid rgb(193, 181, 181)
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
    
-    
 }
 
 /* Profile Card Styling */
 .card {
-    background: #ddd9d9;
+    position: relative;
     padding: 20px;
-    
     border-radius: 12px;
     display: flex;
-    align-items: center;
-    border: 1px solid black
+}
+
+.colours {
+    position: absolute;
+    left: 50%;
+    margin-left:-364px;
+    width: 128px;
+    opacity: 85%;
+    border-radius: 12px 0px 0px 12px;
 }
 
 .profile-img-wrapper {
-    position:relative;
-    margin-right: 80px;
+    flex: 1;
+    margin-right: 30px;
+    height: fit-content;
+    width: fit-content;
 }
 
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    border: 3px solid #ffffff;
+    border: 2px solid #030303;
     background: #ccc;
-    position: relative;
 }
 
 .info {
@@ -103,19 +52,22 @@ background-color: #0559ae;
 
 .info h2 {
     font-size: 1.8em;
-    color: #333;
     margin-bottom: 10px;
 }
 
 .sub-info {
-    color: #666;
+    font-weight: 700;
+    word-spacing: 30px;
+    color: #4c4c4c;
 }
 
 .faculty {
-    background: #0559ae;
+    background: #6470CA;
     color: white;
-    padding: 8px;
-    border-radius: 5px;
+    font-weight: 700;
+    padding: 8px 120px 8px 120px;
+    letter-spacing: 1px;
+    border-radius: 25px;
     margin-top: 10px;
     display: inline-block;
 }
@@ -128,24 +80,26 @@ background-color: #0559ae;
 }
 
 .btn {
-    background: #f0f0f0;
+    background: #FEC877;
     padding: 12px 20px;
     border-radius: 8px;
-    border: 1px solid #cccccc;
+    border: 1px solid #000000;
     font-weight: bold;
     cursor: pointer;
     color: #444;
     text-align: center;
     flex: 1;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #d0d0d0;
+    background: #ffb23e;
+    color: white;
 }
 
 /* Contact Info */
 .contact-info {
-    background: #e3f2fd;
+    background: #97b7e0cc;
     padding: 10px 15px;
     border-radius: 8px;
     margin-top: 15px;
@@ -153,19 +107,13 @@ background-color: #0559ae;
 
 .contact-info p {
     margin: 5px 0;
-    color: #0277bd;
+    color: #fafafa;
+    font-weight: bold;
 }
 
-/* Social Icons */
-.social-icons {
-    margin-top: 20px;
-    display: flex;
-    gap: 10px;
-}
 
 .social-icons img {
     width: 24px;
     height: 24px;
     cursor: pointer;
-    
 }
