@@ -4,89 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-<<<<<<< HEAD
+    <link rel="stylesheet" href="../static/css/main.css">
     <link rel="stylesheet" href="../static/css/dashboard.css">
-    <script src="../static/js/dashboard.js" defer></script>
-=======
-    <link rel="stylesheet" href="dashboard.css">
-    <script src="dashboard.js" defer></script>
-    <link rel="stylesheet" href="../static/css/dashboard.css">
-    
->>>>>>> a103ffe2b2ae3dd1a70963f1cc85c6614f5ef562
 </head>
 <body>
+    
+    <br>
     <!-- Navbar -->
     <div class="navbar">
-        <div class="logo">
-            <img src="logo.png" alt="University Logo">
+
+    </div>
+
+
+
+    <!-- Second Navbar -->
+    <div class="navbar_2">
+        <div class="searchnav">
+            <img class="logo" src="..\static\images\logo.png" alt="University Logo">
+        <div class="search-bar"  >
+            <input type="text" placeholder="Search" >
         </div>
-        <div class="nav-links">
-            <button class="nav-btn">Dashboard</button>
-            <button class="nav-btn">Analytics</button>
-            <button class="nav-btn">Resources</button>
-            <button class="nav-btn">Fees</button>
-            <button class="nav-btn">About</button>
-        </div>
+        
         <div class="user-section">
-            <img src="bell.png" id="bell-icon" class="icon" alt="Notifications">
-            <img src="envelope.png" id="envelope-icon" class="icon" alt="Messages">
-            <img src="profile.png" class="profile-pic" alt="Profile">
+            <img src="../static/images/notf.jpg" id="bell-icon" class="icon" alt="Notifications">
+            <img src="../static/images/msg.jpg" id="envelope-icon" class="icon" alt="Messages">
+            <img src="../static/images/profile.jpg" class="icon" alt="Profile">
+        </div>
+        </div>
+        <div class="menu">
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('analytics') }}">Analytics</a>
+            <a href="{{ url_for('resources') }}">Resources</a>
+            <a href="{{ url_for('fees') }}">Fees</a>
+            <a href="{{ url_for('about') }}">About</a>
         </div>
     </div>
 
-    <!-- Dashboard content -->
-    <div class="dashboard">
-        <div class="profile-card">
-            <div class="profile-header">
-                <img class="profile-photo" src="{{ user.profile_photo }}" alt="profile">
-                <div class="profile-info">
-                    <h2>{{user.name}}</h2>
-                    <p>@{{user.id}}</p>
-                    <p>{{user.course}} | {{user.department}} | {{user.division}} | Roll No {{user.rollno}}</p>
+    <!-- Main Container -->
+    <div class="container">
+
+        <img class="colours" src="../static/images/colors.png"/>
+        <div class="card">
+            <div class="info">
+            <div style="display: flex;">
+                <div class="profile-img-wrapper">
+                    <img src="../static/images/me.jpg" alt="Profile Picture" class="profile-img">
                 </div>
-                <div class="profile-actions">
-                    <a href="{{ user.linkedin_url }}" class="linkedin-icon">LinkedIn</a>
-                    <a href="{{ user.github_url }}" class="github-icon">GitHub</a>
+                <div style="flex: 3; text-align: left;">
+                    <h2>Akshat Sanghvi</h2>
+                    <h4 >@210303105522</h4>
+                </div>
+                <div style="flex: 1;" class="social-icons">
+                    <div style="background: white; padding: 4px; border-radius: 10px;">
+                    <img src="../static/images/linkedin.jpg" alt="LinkedIn" >
+                    <img src="../static/images/github.jpg" alt="GitHub">
+                    <img src="../static/images/flag.jpg" alt="Country Flag"> 
+                </div>
                 </div>
             </div>
-            <h3>Faculty of Engineering & Technology</h3>
-            <div class="stats">
-                <button class="stat-item">CGPA: {{ user.cgpa }}</button>
-                <button class="stat-item">Attendance: {{ user.attendance }}%</button>
-                <button class="stat-item">Uploads</button>
-            </div>
-            <div class="contact-info">
-                <p>Email: {{ user.email }}</p>
-                <p>Phone 1: {{ user.phone_primary }}</p>
-                <p>Phone 2: {{ user.phone_secondary }}</p>
-                <p>{{ user.address }}</p>
+                <p class="sub-info">B.TECH. | CSE | 6B30 | 39</p>
+                <p class="faculty">FACULTY OF ENGINEERING & TECHNOLOGY</p>
+
+
+                <div class="buttons">
+                    <div class="btn">CGPA | 9.5</div>
+                    <div class="btn">ATTENDANCE | 98.2%</div>
+                    <div class="btn">UPLOADS</div>
+                </div>
+
+                <div class="contact-info">
+                    <p>210303105522@SOMEUNIVERISTY.AC.IN</p>
+                    <p>+91 6265XXXX92 | +91 9098XXXX13</p>
+                    <p>Vadodara, Gujarat, 390019</p>
+                </div>
+
             </div>
         </div>
     </div>
-
-    <!-- Sidebar for notifications -->
-    <div id="sidebar-notifications" class="sidebar">
-        <h2>Notifications</h2>
-        <ul>
-            <li>New assignment uploaded</li>
-            <li>Fee payment reminder</li>
-            <li>Class timing update</li>
-        </ul>
-    </div>
-
-    <!-- Sidebar for messages -->
-    <div id="sidebar-messages" class="sidebar">
-        <h2>Messages</h2>
-        <ul>
-            <li>Message from Prof. A</li>
-            <li>Message from Coordinator</li>
-            <li>Update on project submission</li>
-        </ul>
-    </div>
-
-    <!-- Overlay -->
-    <div id="overlay" class="overlay"></div>
-
-    <script src="script.js"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@ main = Blueprint('main', __name__)
 def index():
     return render_template('login.html')
 
+db = ["admin", "akshat", "test"]
 
 @main.route('/login', methods=['GET', 'POST'])
 def login():
@@ -16,9 +17,8 @@ def login():
         email = request.form.get('email')
         password = request.form.get('password')
 
-        user = User.query.filter_by(email=email).first()
-        if user and user.check_password(password):
-            login_user(user)
+        if email.lower() in db:
+            login_user(email)
             return redirect(url_for('main.dashboard'))
 
         flash('Invalid email or password')
@@ -39,7 +39,7 @@ def new_student():
         email = request.form['email']
         age = request.form['age']
         major = request.form['major']
-        new_student = Student(name=name, email=email, age=age, major=major)
+        new_student = User(name=name, email=email, age=age, major=major)
         db.session.add(new_student)
         db.session.commit()
         return redirect(url_for('main.dashboard')) 
@@ -70,8 +70,7 @@ def delete_student(id):
 @main.route('/dashboard')
 @login_required
 def dashboard():
-    user = User.query.get(current_user.id)
-    return render_template('dashboard.html', user=user)
+    return render_template('dashboard.html')
 
 
 @main.route('/analytics')

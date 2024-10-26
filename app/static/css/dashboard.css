@@ -1,147 +1,119 @@
-/* General page styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f3f3f3;
-}
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0d3b66;
-    padding: 15px 30px;
-}
 
-.navbar .logo img {
-    width: 120px;
-}
-
-.navbar .nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.navbar .nav-btn {
-    background-color: #f95738;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.navbar .user-section {
-    display: flex;
-    gap: 15px;
-}
-
-.navbar .icon {
-    width: 30px;
-    cursor: pointer;
-}
-
-.navbar .profile-pic {
-    width: 40px;
-    border-radius: 50%;
-}
-
-.dashboard {
-    padding: 40px;
-    display: flex;
+/* Main Container Styling */
+.container {
+    max-width: 48%;
+    margin: 80px auto;
+    background: #d7d7d78e;
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
     justify-content: center;
+    justify-items: center;
+    text-align: center;
+   
 }
 
-.profile-card {
-    background-color: white;
+/* Profile Card Styling */
+.card {
+    position: relative;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-}
-
-.profile-header {
+    border-radius: 12px;
     display: flex;
-    gap: 20px;
 }
 
-.profile-photo {
-    width: 100px;
-    height: 100px;
+.colours {
+    position: absolute;
+    left: 50%;
+    margin-left:-364px;
+    width: 128px;
+    opacity: 85%;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.profile-img-wrapper {
+    flex: 1;
+    margin-right: 30px;
+    height: fit-content;
+    width: fit-content;
+}
+
+.profile-img {
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
+    border: 2px solid #030303;
+    background: #ccc;
 }
 
-.profile-info {
-    flex-grow: 1;
+.info {
+    flex: 1;
 }
 
-.profile-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.info h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
-.linkedin-icon {
-    color: #0077b5;
-    text-decoration: none;
-    font-size: 16px;
+.sub-info {
+    font-weight: 700;
+    word-spacing: 30px;
+    color: #4c4c4c;
 }
 
-.flag-icon {
-    font-size: 20px;
-}
-
-.faculty-info {
-    margin-top: 20px;
-}
-
-.stats {
-    display: flex;
-    gap: 20px;
+.faculty {
+    background: #6470CA;
+    color: white;
+    font-weight: 700;
+    padding: 8px 120px 8px 120px;
+    letter-spacing: 1px;
+    border-radius: 25px;
     margin-top: 10px;
+    display: inline-block;
 }
 
-.stat-item {
-    background-color: #f95738;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.contact-info {
+/* Button Styling */
+.buttons {
+    display: flex;
+    gap: 10px;
     margin-top: 20px;
 }
 
-/* Sidebar styling */
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100%;
-    background-color: #0d3b66;
+.btn {
+    background: #FEC877;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    font-weight: bold;
+    cursor: pointer;
+    color: #444;
+    text-align: center;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #ffb23e;
     color: white;
-    padding: 20px;
-    transition: right 0.3s ease;
 }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
+/* Contact Info */
+.contact-info {
+    background: #97b7e0cc;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 15px;
 }
 
-/* For sidebar active state */
-.sidebar.active {
-    right: 0;
+.contact-info p {
+    margin: 5px 0;
+    color: #fafafa;
+    font-weight: bold;
 }
 
-.overlay.active {
-    display: block;
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
