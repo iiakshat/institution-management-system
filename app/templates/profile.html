@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="../static/css/profile.css">
+    <script>
+        function showPopup(action) {
+            alert("Looking for faculties with " + action + " tag...");
+        }
+
+        function openContactForm() {
+            document.getElementById("contactForm").style.display = "block";
+        }
+
+        function closeContactForm() {
+            document.getElementById("contactForm").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h2>University Logo</h2>
+            <input type="text" placeholder="Search">
+            <div class="icons">
+                <i class="icon">🔔</i>
+                <i class="icon">⚙️</i>
+                <i class="icon">👤</i>
+            </div>
+        </header>
+
+        <div class="profile-card">
+            <div class="color-frame">
+                <div class="profile-info">
+                    <img src="profile-photo.jpg" alt="Profile Photo" class="profile-photo">
+                    <h1>Akshat Sanghvi</h1>
+                    <p>@210303105522</p>
+                    <p>B.TECH. | CSE | 6B30 | ROLL NO 39</p>
+                    <p><strong>Faculty of Engineering & Technology</strong></p>
+
+                    <div class="buttons">
+                        <button onclick="showPopup('CGPA')">CGPA | 9.5</button>
+                        <button onclick="showPopup('Attendance')">Attendance | 98.2%</button>
+                        <button onclick="showPopup('Uploads')">Uploads</button>
+                    </div>
+
+                    <div class="contact-info">
+                        <p>📧 210303105522@someuniversity.ac.in</p>
+                        <p>📞 +91 6265XXXX92</p>
+                        <p>📞 +91 9098XXXX13</p>
+                        <p>📍 C-101, Khodiyar Nagar, Vadodara, Gujarat, 390019</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tags">
+                <button onclick="showPopup('Python')">Python</button>
+                <button onclick="showPopup('Machine Learning')">Machine Learning</button>
+                <button onclick="showPopup('Data Science')">Data Science</button>
+                <button onclick="showPopup('Project Management')">Project Management</button>
+                <button onclick="showPopup('Artificial Intelligence')">Artificial Intelligence</button>
+                <button onclick="showPopup('Power BI')">Power BI</button>
+            </div>
+
+            <div class="action-buttons">
+                <button onclick="alert('Contact requested)">Request Contact</button>
+                <button onclick="openContactForm()">Send Message</button>
+            </div>
+        </div>
+
+        <!-- Contact Form Popup -->
+        <div id="contactForm" class="form-popup">
+            <form action="#" class="form-container">
+                <h2>Contact Akshat Sanghvi</h2>
+
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Your Name" name="name" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Your Email" name="email" required>
+
+                <label for="message"><b>Message</b></label>
+                <textarea placeholder="Write your message here..." name="message" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+                <button type="button" class="btn cancel" onclick="closeContactForm()">Close</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
