@@ -47,29 +47,33 @@
                 <input type="date" id="datePicker">
             </div>
             
+            
             <div class="select-subject">
                 <label for="subject">Select Subject:</label>
                 <select id="subject">
-                    <option value="subject">{{Resource.subject}}</option>
-                    <option value="subject">{{Resource.subject}}</option>
-                    <option value="subject">{{Resource.subject}}</option>
-                    <option value="subject">{{Resource.subject}}</option>
-                    <option value="subject">{{Resource.subject}}</option>
+                    <option value="subject">{{Resource.subject[0]}}</option>
+                    <option value="subject">{{Resource.subject[1]}}</option>
+                    <option value="subject">{{Resource.subject[2]}}</option>
+                    <option value="subject">{{Resource.subject[3]}}</option>
+                    <option value="subject">{{Resource.subject[4]}}</option>
                 </select>
             </div>
+            <h3> OR</h3>
+            <input type="file" id="fileInput" title="Upload Audio">
+
 
             <div class="summary-notes-toggle">
                 <button id="summaryBtn">Summary</button>
                 <button id="notesBtn">Notes</button>
             </div>
 
-            <div id="lectureSummary" class="content-box">
-                <h3>{{Resource.subject}} Summary</h3>
+               <div id="lectureSummary" class="content-box">
+                <h3>{{Resource.chose}} Summary</h3>
                 <p>{{Resource.summary}}</p>
             </div>
 
             <div id="lectureNotes" class="content-box hidden">
-                <h3>{Lecture} Notes</h3>
+                <h3>{{Resource.chose}} Notes</h3>
                 <table>
                     <tr>
                         <th>Sr No.</th>
@@ -77,27 +81,26 @@
                         <th>Pdf Name</th>
                         <th>Likes</th>
                         <th>Views</th>
+                    </tr>                   <tr>
+                        <td>{{user.id}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{Resource.notes_url}}</td>
+                        <td>{{Resource.likes}}</td>
+                        <td>{{Resource.views}}</td>
                     </tr>
                     <tr>
                         <td>{{user.id}}</td>
                         <td>{{user.name}}</td>
-                        <td>{{Resouce.notes_url}}</td>
+                        <td>{{Resource.notes_url}}</td>
                         <td>{{Resource.likes}}</td>
-                        <td>{{Resouce.views}}</td>
+                        <td>{{Resource.views}}</td>
                     </tr>
                     <tr>
                         <td>{{user.id}}</td>
                         <td>{{user.name}}</td>
-                        <td>{{Resouce.notes_url}}</td>
+                        <td>{{Resource.notes_url}}</td>
                         <td>{{Resource.likes}}</td>
-                        <td>{{Resouce.views}}</td>
-                    </tr>
-                    <tr>
-                        <td>{{user.id}}</td>
-                        <td>{{user.name}}</td>
-                        <td>{{Resouce.notes_url}}</td>
-                        <td>{{Resource.likes}}</td>
-                        <td>{{Resouce.views}}</td>
+                        <td>{{Resource.views}}</td>
                     </tr>
                     
                 </table>
